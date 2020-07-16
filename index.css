@@ -1,0 +1,137 @@
+:root {
+    --font-color: #2d3436;
+    --body-bg-color: #f7f1e3;
+    --container-bg-color: #ffffff;
+    --todo-bg-color: #e5ecf3;
+    --done-bg-color: #9de9bc;
+    --svg-normal-color: #2d3436;
+    --svg-hover-color: #0984e3;
+    --svg-complete-color: #0984e3;
+    --svg-remove-color: #d63031;
+    --svg-remove-hover-color: #ff4757;
+    --svg-edit-color: #fac044;
+    --svg-edit-hover-color: #eea301;
+}
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: var(--font-color);
+}
+
+body {
+    background-color: var(--body-bg-color);
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    background-color: var(--container-bg-color);
+    padding: 2%;
+    min-height: 30vh;
+    min-width: 30vw;
+    width: auto;
+    height: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 3.5%;
+}
+
+h2 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+h2::after {
+    content: "";
+    border-bottom: 5px solid black;
+    display: block;
+    width: auto;
+}
+h1{
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header input {
+    min-height: 40px;
+    width: 100%;
+    border: 2px solid;
+    border-radius: 5px;
+    padding-left: 5%;
+    background-color: #f9f9f9;
+}
+
+header button {
+    min-width: 40px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    padding-left: 8px;
+}
+
+li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--todo-bg-color);
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+li .buttons {
+    min-width: 150px;
+    margin-left: auto;
+    display: inline;
+}
+
+li .buttons button {
+    background: none;
+    min-width: 40px;
+    border: none;
+    font-size: 2rem;
+}
+
+.completed li {
+    background-color: var(--done-bg-color);
+}
+
+.completed .complete svg path {
+    fill: var(--svg-complete-color);
+}
+
+svg {
+    max-width: 25px;
+}
+
+svg path {
+    fill: var(--svg-normal-color);
+}
+
+button:hover svg path {
+    fill: var(--svg-hover-color);
+}
+
+.remove svg path {
+    fill: var(--svg-remove-color);
+}
+
+.edit svg path {
+    fill: var(--svg-edit-color);
+}
+
+.edit:hover svg path {
+    fill: var(--svg-edit-hover-color);
+}
+
+.remove:hover svg path {
+    fill: var(--svg-remove-hover-color);
+}
