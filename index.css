@@ -77,7 +77,7 @@ header button {
 }
 
 li {
-    width: 100%;
+    width: 90vw;
     display: flex;
     align-items: center;
     background-color: var(--todo-bg-color);
@@ -88,7 +88,7 @@ li {
 }
 
 li .buttons {
-    min-width: 150px;
+    min-width: 120px;
     margin-left: auto;
     display: inline;
 }
@@ -134,4 +134,28 @@ button:hover svg path {
 
 .remove:hover svg path {
     fill: var(--svg-remove-hover-color);
+}
+
+@media (max-width: 800px) {
+    #container{
+        padding: 5%;
+        width: 100%;
+        border-radius: 7%;
+    }
+    li .buttons {
+        min-width: 80px;
+        margin-left: auto;
+        display: inline;
+    }
+    li .buttons button {
+        background: none;
+        min-width: 10px;
+        width: 20px;
+        border: none;
+        font-size: 1rem;
+        margin: 4%;
+    }
+    #add{
+        font-size: 1.2rem;
+    }
 }
